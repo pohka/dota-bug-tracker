@@ -1,0 +1,244 @@
+:root{
+  --bg : #555;
+  --post_bg : #333;
+  --post_hover : #383838;
+  --pri : #c33;
+  --text : #fff;
+  --border : rgba(120,20,20, 0.5);
+  --shadow : #121212;
+  --shadow_red : rgba(150,20,20, 0.9);
+  --app_bg: rgba(0,0,0,0.15);
+}
+
+html{
+	box-sizing: border-box;
+	overflow-y: scroll;
+	overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Titillium Web', sans-serif;
+  background: url("/bg_battlecup.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+p{
+  margin: 5px 0px;
+}
+
+body{
+  width: 700px;
+	min-height: 100vh;
+  margin: 80px auto;
+
+}
+
+
+
+a{
+  text-decoration: none;
+  color: var(--text);
+}
+
+#app{
+  box-shadow: 0px 0px 20px var(--app_bg);
+  background: var(--app_bg);
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.post-con{
+  background: var(--post_bg);
+  width: 100%;
+  min-height: 160px;
+  padding: 30px 30px;
+  padding-bottom: 0px;
+  cursor : pointer;
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  border: 1px solid var(--border);
+  box-shadow: 0px 0px 4px var(--shadow);
+  animation: slideUp 0.4s ease-in, fadeIn 0.3s;
+}
+
+.post-con:hover{
+  background: var(--post_hover);
+  transition: 0.1s;
+  box-shadow: 0px 0px 8px var(--shadow_red);
+  transition: 0.2s;
+}
+
+.post-thumbnail{
+  width: 120px;
+  display: block;
+}
+
+.img-con{
+  overflow: hidden;
+  height: 140px;
+  width: 120px;
+  border:1px solid var(--border);
+  border-radius: 2px;
+  box-shadow: -3px 2px 6px var(--shadow);
+}
+
+.post-thumbnail img{
+  margin-top: -10px;
+  width: 120px;
+  height: 150px;
+}
+
+.post-text{
+  width: 70%;
+  margin-left: 30px;
+  padding-bottom: 30px;
+}
+
+.post-text h1{
+  margin-top: 0px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.post-text h1::after{
+  content:" ";
+  display: block;
+  margin-top: 4px;
+  height: 1px;
+  width: 100%;
+  background: var(--pri);
+}
+
+.post-text a{
+  color : var(--text);
+  text-decoration: underline;
+}
+
+.post-author{
+  margin: 6px 0px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+.post-more{
+  width: 100%;
+  margin-top: 8px;
+  border-top: 1px solid var(--pri);
+  display: block;
+  padding: 20px;
+  margin-bottom: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.post-more:hover{
+  transition: 0.1s;
+  color: var(--pri);
+  text-decoration: underline;
+  background: #252525;
+}
+
+
+nav{
+  width: 100%;
+  text-align: center;
+  background: #222;
+  border-bottom: 1px solid rgba(200,20,20,0.8);
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+}
+
+nav h1{
+  font-size: 18px;
+  line-height: 50px;
+  margin: 0;
+  font-weight: normal;
+  align-self: center;
+}
+
+.nav-link{
+  position: fixed;
+  right: 0;
+  top: 0;
+
+}
+
+.nav-link a{
+  display: inline-block;
+  color: #e33;
+  width: 70px;
+  height: 49px;
+  padding: 12px;
+}
+
+
+.nav-link a:hover{
+  background: var(--post_hover);
+}
+
+.nav-link a svg{
+  width: 26px;
+}
+
+.timestamp-con{
+  display: block;
+  margin-left: 82%;
+  width: 20%;
+  margin-top: -28px;
+}
+
+.timestamp{
+  position: absolute;
+}
+
+@media screen and (max-width: 980px) {
+  body{
+    width: 95%;
+    margin-top: 100px;
+  }
+
+  nav{
+    height: 80px;
+  }
+
+  nav h1{
+    font-size: 25px;
+    line-height: 80px;
+  }
+
+  .nav-link a{
+    height: 79px;
+    width: 90px;
+    padding: 20px;
+  }
+
+  .nav-link a svg{
+    width: 40px;
+  }
+
+  .timestamp{
+    font-size: 25px;
+    margin-top: -15px;
+  }
+
+  .post-text h1{
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
