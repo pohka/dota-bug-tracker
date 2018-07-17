@@ -1,3 +1,272 @@
+/*---------- /quas/css/animation.css ----------*/
+
+@keyframes slideLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale3d(0.4, 0.4, 0.4);
+  }
+
+  70% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes smallPop {
+  0% {
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+
+  70% {
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes shiftLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0) scale3d(0.8, 0.8, 0.8);
+  }
+
+  40% {
+    transform: translate3d(-20%, 0, 0) scale3d(1.1, 1.1, 1.1);
+  }
+
+  60% {
+    transform: translate3d(-10%, 0, 0) scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes shiftRight {
+  0% {
+    transform: translate3d(100%, 0, 0) scale3d(0.8, 0.8, 0.8);
+  }
+
+  40% {
+    transform: translate3d(20%, 0, 0) scale3d(1.1, 1.1, 1.1);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes flipX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+@keyframes spinRight {
+  from {
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes smallZoomIn {
+  from {
+    transform: scale3d(0.8, 0.8, 0.8 );
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes smallZoomOut {
+  from {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pinchY {
+  from {
+    transform: scale3d(1, 1.5, 1);
+  }
+
+  80% {
+    transform: scale3d(1, 0.9, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pinchX {
+  from {
+    transform: scale3d(1.5, 1, 1);
+  }
+
+  80% {
+    transform: scale3d(0.9, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/*---------- /main.css ----------*/
+
 :root{
   --bg : #555;
   --post_bg : #333;

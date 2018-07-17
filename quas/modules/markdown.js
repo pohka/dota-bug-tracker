@@ -430,7 +430,7 @@ export({
       }
     }
 
-    console.log("markdown result:", vdoms);
+  //  console.log("markdown result:", vdoms);
     return vdoms;
   },
 

@@ -637,7 +637,8 @@ Dev.stringifyVDOM = (vdom, tabs, isChild) => {
                 Dev.tabs(tabs + 3) + "key: \"" + customAttrs[i].key + "\",\n";
 
         //true if the custom attr value should be a string
-        if(Dev.customAttrsValueIsString.indexOf(customAttrs[i].key) > -1){
+        let startOfKey = customAttrs[i].key.split("-")[0];
+        if(Dev.customAttrsValueIsString.indexOf(startOfKey) > -1){
           str += Dev.tabs(tabs + 3) + "val: \"" + customAttrs[i].val + "\"\n";
         }
         //add as javascript
@@ -1365,8 +1366,8 @@ Dev.build = function(filename, extention){
 
   for(let i in types){
     let element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + Dev.bundle[types[i]]);
-    element.setAttribute('download', filename+"."+types[i]);
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + types[i]);
+    element.setAttribute('download', filename+"."+i);
     element.style.display = 'none';
     document.body.appendChild(element);
     element.click();

@@ -20,7 +20,7 @@ export({
     Quas.async = {};
     Quas.customAttrs["async"] = (params, data, parentVDOM, comp) => {
       //async load img
-      if(params[0] == "imgsrc"){
+      if(params[0] == "src"){
         if(!Quas.async.imgs){
           Quas.async.imgs = [];
         }
